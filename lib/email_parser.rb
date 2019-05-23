@@ -12,9 +12,8 @@ attr_accessor :emails
   end
 
   def parse
-    emails = []
-    parsed = @emails.scan(/\w+@+\w+\.+\w+/)
-    emails.push(parsed).flatten.uniq
+    @emails.scan(/\w+@+\w+\.+\w+/).uniq
+    # emails.push(parsed).flatten.uniq
   end
 
 end
